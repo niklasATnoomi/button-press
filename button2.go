@@ -73,7 +73,7 @@ func storage_new_value(button_value int) {
 			}
 		} /**/
 	}
-	fmt.Print("press times=%d", c/2)
+	fmt.Print("press times=", c/2)
 	//fmt.Print(string(c))
 	fmt.Print("\n")
 
