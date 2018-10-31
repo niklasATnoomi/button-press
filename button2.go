@@ -73,15 +73,20 @@ func storage_new_value(button_value int) {
 			}
 		} /**/
 	}
-	fmt.Print("press times=", c/2)
-	//fmt.Print(string(c))
-	fmt.Print("\n")
+	if(display%20==0)
+	{
+		fmt.Print("press times=", c/2)
+	    //fmt.Print(string(c))
+	    fmt.Print("\n")
+	}
+	
 
 }
 
 func main() {
 	//var a uint8
-	var button uint8
+	var button int
+	var display int
 	memsetLoop()
 	open_port0_24()
 	direction_port_0_24()
@@ -92,8 +97,9 @@ func main() {
 		button = read_value_0_24()
 		//fmt.Print(string(button))
 		rollover()
-		storage_new_value(int(button))
+		storage_new_value(int(button), display)
 		time.Sleep(50 * time.Millisecond)
+		display++
 
 	}
 

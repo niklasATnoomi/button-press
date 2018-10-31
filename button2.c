@@ -84,10 +84,8 @@ static void vpu_pow_exit(void)
  
 module_init(vpu_pow_init);
 module_exit(vpu_pow_exit);
+
 /*
---------------------- 
-作者：王凯_光谷 
-来源：CSDN 
-原文：https://blog.csdn.net/kao2406/article/details/51222570 
-版权声明：本文为博主原创文章，转载请附上博文链接！
+reference
+https://blog.csdn.net/kao2406/article/details/51222570 
 */
