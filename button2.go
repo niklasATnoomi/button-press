@@ -59,7 +59,7 @@ func rollover() {
 
 }
 
-func storage_new_value(button_value int) {
+func storage_new_value(button_value int, display uint8) {
 	var c int
 	c = 0
 	array_button[0] = button_value
@@ -73,20 +73,19 @@ func storage_new_value(button_value int) {
 			}
 		} /**/
 	}
-	if(display%20==0)
-	{
+	if display%20 == 0 {
 		fmt.Print("press times=", c/2)
-	    //fmt.Print(string(c))
-	    fmt.Print("\n")
+		//fmt.Print(string(c))
+		fmt.Print("\n")
 	}
-	
 
 }
 
 func main() {
 	//var a uint8
-	var button int
-	var display int
+	var button uint8
+	var display uint8
+	display = 0
 	memsetLoop()
 	open_port0_24()
 	direction_port_0_24()
